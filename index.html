@@ -67,11 +67,19 @@
             word-wrap: break-word;
         }
 
-       @media (max-width: 600px) {
+    @media (max-width: 600px) {
+    
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    
     .label {
-        display: inline;
+        display: inline-block;
         min-width: unset;
-        margin-right: 5px;
+        margin-right: 6px;
+        flex-shrink: 0; 
     }
 }
 
