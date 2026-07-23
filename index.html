@@ -19,6 +19,8 @@
       gtag('js', new Date());
       gtag('config', 'G-J0KYK0PKV9');
     </script>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     
     <style>
         body {
@@ -132,25 +134,48 @@ a.terminal:hover {
     text-shadow: 0 0 5px rgba(255, 166, 87, 0.6); 
     text-decoration: none; 
 }
-        .btn {
-            display: block;
-            margin-top: 35px;
-            padding: 12px 20px;
-            background-color: #58a6ff;
-            color: #0d1117;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
 
-        .btn:hover {
-            background-color: #79c0ff;
-            box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
-        }
+.turnstile-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    min-height: 65px; 
+}
+
+#status-text {
+    color: #ff7b72;
+    font-style: italic;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+
+        
+.btn {
+    display: none; 
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: #58a6ff;
+    color: #0d1117;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #79c0ff;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
+}
 
         .cursor {
             display: inline-block;
@@ -294,7 +319,39 @@ a.terminal:hover {
     <span class="action">Routing to external codebase</span><span class="cursor"></span>
 </p>
         
-        <a href="https://axon.rupamdas.in/github" class="btn">Initialize GitHub Terminal</a>
+<p><span class="label">>> Protocol:</span> <span id="status-text">Awaiting clearance...</span></p>
+
+
+<div class="turnstile-container">
+    <div class="cf-turnstile" 
+         data-sitekey="0x4AAAAAAD8Ha-pvntkZwe18" 
+         data-theme="dark" 
+         data-callback="grantAccess">
     </div>
+</div>
+
+
+<a href="https://axon.rupamdas.in/github" class="btn" id="terminal-btn">Initialize GitHub Terminal</a>
+
+
+<script>
+    function grantAccess() {
+        
+        const cfContainer = document.querySelector('.turnstile-container');
+        cfContainer.style.display = 'none';
+    
+        
+        const statusText = document.getElementById('status-text');
+        statusText.textContent = "Clearance Granted. Link Decrypted.";
+        statusText.style.color = "#3fb950"; 
+        statusText.style.animation = "none"; 
+        statusText.style.textShadow = "0 0 5px rgba(63, 185, 80, 0.4)";
+        
+        
+        const terminalBtn = document.getElementById('terminal-btn');
+        terminalBtn.style.display = 'block';
+    }
+</script>
+    
 </body>
 </html>
