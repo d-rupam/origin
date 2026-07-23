@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupam Das | The Origin</title>
+    <link rel="icon" type="image/png" href="https://operon.rupamdas.in/capsid/R.png">
+    <link rel="apple-touch-icon" href="https://operon.rupamdas.in/capsid/R.png">
+    <meta name="description" content="Origin terminal of Rupam Das, Microbiology Student at Dum Dum Motijheel College (WBSU) & Systems Architect building the TETRAD and Operon ecosystems.">
 
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0KYK0PKV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J0KYK0PKV9');
+    </script>
+    
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hacker CRT Scanline Effect */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .container {
+            border: 1px solid #30363d;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: rgba(22, 27, 34, 0.85);
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.15);
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            color: #58a6ff;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 15px;
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 12px 0;
+        }
+
+        .highlight {
+            color: #3fb950;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(63, 185, 80, 0.4);
+        }
+
+        a.contact-link {
+            color: #58a6ff;
+            text-decoration: none;
+            border-bottom: 1px dashed #58a6ff;
+            transition: all 0.3s ease;
+        }
+
+        a.contact-link:hover {
+            color: #79c0ff;
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.6);
+        }
+
+        .btn {
+            display: block;
+            margin-top: 35px;
+            padding: 12px 20px;
+            background-color: #58a6ff;
+            color: #0d1117;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background-color: #79c0ff;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #58a6ff;
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+            margin-left: 5px;
+            box-shadow: 0 0 5px #58a6ff;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Pure CSS Rotating DNA Helix */
+        .dna-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 30px 0;
+        }
+
+        .base-pair {
+            width: 60px;
+            height: 2px;
+            background: #30363d;
+            position: relative;
+            animation: spin 3s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .base-pair::before, .base-pair::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            top: -5px;
+        }
+
+        /* Left Adenine/Thymine (Blue) */
+        .base-pair::before { 
+            left: -6px; 
+            background: #58a6ff; 
+            box-shadow: 0 0 8px #58a6ff;
+        }
+        
+        /* Right Cytosine/Guanine (Green) */
+        .base-pair::after { 
+            right: -6px; 
+            background: #3fb950; 
+            box-shadow: 0 0 8px #3fb950;
+        }
+
+        /* Staggered animation for the 3D twist effect */
+        .bp-1 { animation-delay: 0s; }
+        .bp-2 { animation-delay: -0.3s; }
+        .bp-3 { animation-delay: -0.6s; }
+        .bp-4 { animation-delay: -0.9s; }
+        .bp-5 { animation-delay: -1.2s; }
+        .bp-6 { animation-delay: -1.5s; }
+
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[ Rupam Das :: The Origin ]</h1>
+        
+        <!-- Rotating DNA Animation -->
+        <div class="dna-container">
+            <div class="base-pair bp-1"></div>
+            <div class="base-pair bp-2"></div>
+            <div class="base-pair bp-3"></div>
+            <div class="base-pair bp-4"></div>
+            <div class="base-pair bp-5"></div>
+            <div class="base-pair bp-6"></div>
+        </div>
+
+        <p>> System Status: <span class="highlight">Online & Stable</span></p>
+        <p>> Identity: Microbiology Student & Systems Architect</p>
+        <p>> Coordinates: Dum Dum Motijheel College (WBSU)</p>
+        <p>> Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
+        <p>> Comms Link: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
+        <p>> Current Action: Routing to external codebase<span class="cursor"></span></p>
+        
+        <a href="https://axon.rupamdas.in/github" class="btn">Initialize GitHub Terminal</a>
+    </div>
+</body>
+</html>
