@@ -125,14 +125,14 @@
             50% { opacity: 0; }
         }
 
-        /* Landscape Rotating DNA Helix */
+        /* Fully Responsive Landscape DNA */
         .dna-container {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between; /* Dynamically spaces pairs */
             align-items: center;
-            gap: 15px;
-            margin: 35px 0;
+            width: 90%; /* Takes up 90% of the container width */
+            margin: 40px auto;
         }
 
         .base-pair {
@@ -167,30 +167,31 @@
             box-shadow: 0 0 8px #3fb950;
         }
 
-        /* Extended 12 Base Pairs */
+        /* Extended 20 Base Pairs for maximum width coverage */
         .bp-1 { animation-delay: 0s; }
-        .bp-2 { animation-delay: -0.2s; }
-        .bp-3 { animation-delay: -0.4s; }
-        .bp-4 { animation-delay: -0.6s; }
-        .bp-5 { animation-delay: -0.8s; }
-        .bp-6 { animation-delay: -1.0s; }
-        .bp-7 { animation-delay: -1.2s; }
-        .bp-8 { animation-delay: -1.4s; }
-        .bp-9 { animation-delay: -1.6s; }
-        .bp-10 { animation-delay: -1.8s; }
-        .bp-11 { animation-delay: -2.0s; }
-        .bp-12 { animation-delay: -2.2s; }
+        .bp-2 { animation-delay: -0.15s; }
+        .bp-3 { animation-delay: -0.3s; }
+        .bp-4 { animation-delay: -0.45s; }
+        .bp-5 { animation-delay: -0.6s; }
+        .bp-6 { animation-delay: -0.75s; }
+        .bp-7 { animation-delay: -0.9s; }
+        .bp-8 { animation-delay: -1.05s; }
+        .bp-9 { animation-delay: -1.2s; }
+        .bp-10 { animation-delay: -1.35s; }
+        .bp-11 { animation-delay: -1.5s; }
+        .bp-12 { animation-delay: -1.65s; }
+        .bp-13 { animation-delay: -1.8s; }
+        .bp-14 { animation-delay: -1.95s; }
+        .bp-15 { animation-delay: -2.1s; }
+        .bp-16 { animation-delay: -2.25s; }
+        .bp-17 { animation-delay: -2.4s; }
+        .bp-18 { animation-delay: -2.55s; }
+        .bp-19 { animation-delay: -2.7s; }
+        .bp-20 { animation-delay: -2.85s; }
 
         @keyframes spin {
             0% { transform: rotateX(0deg); }
             100% { transform: rotateX(360deg); }
-        }
-        
-        /* For extremely small mobile screens to prevent DNA overflow */
-        @media (max-width: 480px) {
-            .dna-container {
-                gap: 8px;
-            }
         }
     </style>
 </head>
@@ -198,7 +199,7 @@
     <div class="container">
         <h1>[ Rupam Das :: The Origin ]</h1>
         
-        <!-- Rotating Landscape DNA Animation -->
+        <!-- Expanded Responsive DNA Strand -->
         <div class="dna-container">
             <div class="base-pair bp-1"></div>
             <div class="base-pair bp-2"></div>
@@ -212,14 +213,22 @@
             <div class="base-pair bp-10"></div>
             <div class="base-pair bp-11"></div>
             <div class="base-pair bp-12"></div>
+            <div class="base-pair bp-13"></div>
+            <div class="base-pair bp-14"></div>
+            <div class="base-pair bp-15"></div>
+            <div class="base-pair bp-16"></div>
+            <div class="base-pair bp-17"></div>
+            <div class="base-pair bp-18"></div>
+            <div class="base-pair bp-19"></div>
+            <div class="base-pair bp-20"></div>
         </div>
 
-        <p>$ System Status: <span class="highlight">Online & Stable</span></p>
-        <p>$ Identity: Microbiology Student & Systems Architect</p>
-        <p>$ Coordinates: Dum Dum Motijheel College (WBSU)</p>
-        <p>$ Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
-        <p>$ Terminal: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
-        <p>$ Current Action: Routing to external codebase<span class="cursor"></span></p>
+        <p>>> System Status: <span class="highlight">Online & Stable</span></p>
+        <p>>> Identity: Microbiology Student & Systems Architect</p>
+        <p>>> Coordinates: Dum Dum Motijheel College (WBSU)</p>
+        <p>>> Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
+        <p>>> Terminal: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
+        <p>>> Current Action: Routing to external codebase<span class="cursor"></span></p>
         
         <a href="https://axon.rupamdas.in/github" class="btn">Initialize GitHub Terminal</a>
     </div>
