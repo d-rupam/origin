@@ -126,13 +126,13 @@
             50% { opacity: 0; }
         }
 
-        /* Fully Responsive Landscape DNA */
+        
         .dna-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-between; /* Dynamically spaces pairs */
+            justify-content: space-between; 
             align-items: center;
-            width: 90%; /* Takes up 90% of the container width */
+            width: 90%; 
             margin: 40px auto;
         }
 
@@ -154,21 +154,21 @@
             left: -5px;
         }
 
-        /* Top Adenine/Thymine (Blue) */
+       
         .base-pair::before { 
             top: -6px; 
             background: #58a6ff; 
             box-shadow: 0 0 8px #58a6ff;
         }
         
-        /* Bottom Cytosine/Guanine (Green) */
+        
         .base-pair::after { 
             bottom: -6px; 
             background: #3fb950; 
             box-shadow: 0 0 8px #3fb950;
         }
 
-        /* Extended 20 Base Pairs for maximum width coverage */
+        
         .bp-1 { animation-delay: 0s; }
         .bp-2 { animation-delay: -0.15s; }
         .bp-3 { animation-delay: -0.3s; }
@@ -200,7 +200,7 @@
     <div class="container">
         <h1>Rupam Das - The Origin</h1>
         
-        <!-- Expanded Responsive DNA Strand -->
+        
         <div class="dna-container">
             <div class="base-pair bp-1"></div>
             <div class="base-pair bp-2"></div>
