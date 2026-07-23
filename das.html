@@ -40,7 +40,7 @@
             border-radius: 8px;
             background-color: rgba(22, 27, 34, 0.85);
             box-shadow: 0 0 25px rgba(88, 166, 255, 0.15);
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             box-sizing: border-box;
             text-align: left;
@@ -125,18 +125,19 @@
             50% { opacity: 0; }
         }
 
-        /* Pure CSS Rotating DNA Helix */
+        /* Landscape Rotating DNA Helix */
         .dna-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
-            margin: 30px 0;
+            gap: 15px;
+            margin: 35px 0;
         }
 
         .base-pair {
-            width: 60px;
-            height: 2px;
+            width: 2px;
+            height: 60px;
             background: #30363d;
             position: relative;
             animation: spin 3s linear infinite;
@@ -149,34 +150,47 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            top: -5px;
+            left: -5px;
         }
 
-        /* Left Adenine/Thymine (Blue) */
+        /* Top Adenine/Thymine (Blue) */
         .base-pair::before { 
-            left: -6px; 
+            top: -6px; 
             background: #58a6ff; 
             box-shadow: 0 0 8px #58a6ff;
         }
         
-        /* Right Cytosine/Guanine (Green) */
+        /* Bottom Cytosine/Guanine (Green) */
         .base-pair::after { 
-            right: -6px; 
+            bottom: -6px; 
             background: #3fb950; 
             box-shadow: 0 0 8px #3fb950;
         }
 
-        /* Staggered animation for the 3D twist effect */
+        /* Extended 12 Base Pairs */
         .bp-1 { animation-delay: 0s; }
-        .bp-2 { animation-delay: -0.3s; }
-        .bp-3 { animation-delay: -0.6s; }
-        .bp-4 { animation-delay: -0.9s; }
-        .bp-5 { animation-delay: -1.2s; }
-        .bp-6 { animation-delay: -1.5s; }
+        .bp-2 { animation-delay: -0.2s; }
+        .bp-3 { animation-delay: -0.4s; }
+        .bp-4 { animation-delay: -0.6s; }
+        .bp-5 { animation-delay: -0.8s; }
+        .bp-6 { animation-delay: -1.0s; }
+        .bp-7 { animation-delay: -1.2s; }
+        .bp-8 { animation-delay: -1.4s; }
+        .bp-9 { animation-delay: -1.6s; }
+        .bp-10 { animation-delay: -1.8s; }
+        .bp-11 { animation-delay: -2.0s; }
+        .bp-12 { animation-delay: -2.2s; }
 
         @keyframes spin {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); }
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(360deg); }
+        }
+        
+        /* For extremely small mobile screens to prevent DNA overflow */
+        @media (max-width: 480px) {
+            .dna-container {
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -184,7 +198,7 @@
     <div class="container">
         <h1>[ Rupam Das :: The Origin ]</h1>
         
-        <!-- Rotating DNA Animation -->
+        <!-- Rotating Landscape DNA Animation -->
         <div class="dna-container">
             <div class="base-pair bp-1"></div>
             <div class="base-pair bp-2"></div>
@@ -192,14 +206,20 @@
             <div class="base-pair bp-4"></div>
             <div class="base-pair bp-5"></div>
             <div class="base-pair bp-6"></div>
+            <div class="base-pair bp-7"></div>
+            <div class="base-pair bp-8"></div>
+            <div class="base-pair bp-9"></div>
+            <div class="base-pair bp-10"></div>
+            <div class="base-pair bp-11"></div>
+            <div class="base-pair bp-12"></div>
         </div>
 
-        <p>> System Status: <span class="highlight">Online & Stable</span></p>
-        <p>> Identity: Microbiology Student & Systems Architect</p>
-        <p>> Coordinates: Dum Dum Motijheel College (WBSU)</p>
-        <p>> Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
-        <p>> Terminal: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
-        <p>> Current Action: Routing to external codebase<span class="cursor"></span></p>
+        <p>$ System Status: <span class="highlight">Online & Stable</span></p>
+        <p>$ Identity: Microbiology Student & Systems Architect</p>
+        <p>$ Coordinates: Dum Dum Motijheel College (WBSU)</p>
+        <p>$ Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
+        <p>$ Terminal: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
+        <p>$ Current Action: Routing to external codebase<span class="cursor"></span></p>
         
         <a href="https://axon.rupamdas.in/github" class="btn">Initialize GitHub Terminal</a>
     </div>
