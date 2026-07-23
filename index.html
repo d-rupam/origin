@@ -67,11 +67,18 @@
             word-wrap: break-word;
         }
 
-        @media (min-width: 480px) {
-            p {
-                font-size: 1.1rem;
-            }
-        }
+       @media (max-width: 600px) {
+    .label {
+        min-width: auto; /* Removes the massive gap on mobile */
+        margin-right: 8px; /* Normal spacing */
+    }
+}
+
+@media (min-width: 480px) {
+    p {
+        font-size: 1.1rem;
+    }
+}
 
       
 .label {
@@ -123,7 +130,7 @@ a.terminal {
     text-decoration: none; 
     text-shadow: 0 0 2px rgba(255, 166, 87, 0.2);
     transition: all 0.3s ease; 
-    word-break: break-all;
+    word-break: break-word;
 }
 
 a.terminal:hover {
