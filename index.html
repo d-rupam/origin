@@ -8,18 +8,17 @@
     <link rel="apple-touch-icon" href="https://operon.rupamdas.in/capsid/R.png">
     <meta name="description" content="Origin terminal of Rupam Das, Microbiology Student at Dum Dum Motijheel College (WBSU) & Systems Architect building the TETRAD and Operon ecosystems.">
 
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
     
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0KYK0PKV9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-J0KYK0PKV9');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0KYK0PKV9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-J0KYK0PKV9');
+    </script>
     
     <style>
         body {
@@ -29,38 +28,69 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
         }
+
         .container {
             border: 1px solid #30363d;
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
-            background-color: #161b22;
-            box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
-            max-width: 600px;
+            background-color: rgba(22, 27, 34, 0.85);
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.15);
+            max-width: 650px;
             width: 100%;
+            box-sizing: border-box;
             text-align: left;
+            backdrop-filter: blur(5px);
         }
-        h1 {
+
+     h1 {
             color: #58a6ff;
             letter-spacing: 2px;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 5vw, 1.5rem); 
             margin-top: 0;
             border-bottom: 1px solid #30363d;
             padding-bottom: 15px;
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
+            text-align: center;
+            white-space: nowrap;
         }
+
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             margin: 12px 0;
+            word-wrap: break-word;
         }
+
+        @media (min-width: 480px) {
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
         .highlight {
             color: #3fb950;
             font-weight: bold;
+            text-shadow: 0 0 5px rgba(63, 185, 80, 0.4);
         }
+
+        a.contact-link {
+            color: #58a6ff;
+            text-decoration: none;
+            border-bottom: 1px dashed #58a6ff;
+            transition: all 0.3s ease;
+            word-break: break-all;
+        }
+
+        a.contact-link:hover {
+            color: #79c0ff;
+            text-shadow: 0 0 8px rgba(88, 166, 255, 0.6);
+        }
+
         .btn {
             display: block;
             margin-top: 35px;
@@ -75,10 +105,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         .btn:hover {
             background-color: #79c0ff;
-            box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
         }
+
         .cursor {
             display: inline-block;
             width: 10px;
@@ -87,20 +119,117 @@
             vertical-align: middle;
             animation: blink 1s step-end infinite;
             margin-left: 5px;
+            box-shadow: 0 0 5px #58a6ff;
         }
+
         @keyframes blink {
             50% { opacity: 0; }
+        }
+
+        
+        .dna-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            align-items: center;
+            width: 90%; 
+            margin: 40px auto;
+        }
+
+        .base-pair {
+            width: 2px;
+            height: 60px;
+            background: #30363d;
+            position: relative;
+            animation: spin 3s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .base-pair::before, .base-pair::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            left: -5px;
+        }
+
+       
+        .base-pair::before { 
+            top: -6px; 
+            background: #58a6ff; 
+            box-shadow: 0 0 8px #58a6ff;
+        }
+        
+        
+        .base-pair::after { 
+            bottom: -6px; 
+            background: #3fb950; 
+            box-shadow: 0 0 8px #3fb950;
+        }
+
+        
+        .bp-1 { animation-delay: 0s; }
+        .bp-2 { animation-delay: -0.15s; }
+        .bp-3 { animation-delay: -0.3s; }
+        .bp-4 { animation-delay: -0.45s; }
+        .bp-5 { animation-delay: -0.6s; }
+        .bp-6 { animation-delay: -0.75s; }
+        .bp-7 { animation-delay: -0.9s; }
+        .bp-8 { animation-delay: -1.05s; }
+        .bp-9 { animation-delay: -1.2s; }
+        .bp-10 { animation-delay: -1.35s; }
+        .bp-11 { animation-delay: -1.5s; }
+        .bp-12 { animation-delay: -1.65s; }
+        .bp-13 { animation-delay: -1.8s; }
+        .bp-14 { animation-delay: -1.95s; }
+        .bp-15 { animation-delay: -2.1s; }
+        .bp-16 { animation-delay: -2.25s; }
+        .bp-17 { animation-delay: -2.4s; }
+        .bp-18 { animation-delay: -2.55s; }
+        .bp-19 { animation-delay: -2.7s; }
+        .bp-20 { animation-delay: -2.85s; }
+
+        @keyframes spin {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(360deg); }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>[ Rupam Das :: The Origin ]</h1>
-        <p>> System Status: <span class="highlight">Online & Stable</span></p>
-        <p>> Identity: Microbiology Student & Systems Architect</p>
-        <p>> Coordinates: Dum Dum Motijheel College (WBSU)</p>
-        <p>> Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
-        <p>> Current Action: Routing to external codebase<span class="cursor"></span></p>
+        <h1>Rupam Das - The Origin</h1>
+        
+        
+        <div class="dna-container">
+            <div class="base-pair bp-1"></div>
+            <div class="base-pair bp-2"></div>
+            <div class="base-pair bp-3"></div>
+            <div class="base-pair bp-4"></div>
+            <div class="base-pair bp-5"></div>
+            <div class="base-pair bp-6"></div>
+            <div class="base-pair bp-7"></div>
+            <div class="base-pair bp-8"></div>
+            <div class="base-pair bp-9"></div>
+            <div class="base-pair bp-10"></div>
+            <div class="base-pair bp-11"></div>
+            <div class="base-pair bp-12"></div>
+            <div class="base-pair bp-13"></div>
+            <div class="base-pair bp-14"></div>
+            <div class="base-pair bp-15"></div>
+            <div class="base-pair bp-16"></div>
+            <div class="base-pair bp-17"></div>
+            <div class="base-pair bp-18"></div>
+            <div class="base-pair bp-19"></div>
+            <div class="base-pair bp-20"></div>
+        </div>
+
+        <p>>> System Status: <span class="highlight">Online & Stable</span></p>
+        <p>>> Identity: Microbiology Student & Systems Architect</p>
+        <p>>> Coordinates: Dum Dum Motijheel College (WBSU)</p>
+        <p>>> Architecture: TETRAD Hub (In Cryo-Sleep Phase)</p>
+        <p>>> Terminal: <a href="mailto:namaste@rupamdas.in" class="contact-link">namaste@rupamdas.in</a></p>
+        <p>>> Current Action: Routing to external codebase<span class="cursor"></span></p>
         
         <a href="https://axon.rupamdas.in/github" class="btn">Initialize GitHub Terminal</a>
     </div>
