@@ -1,197 +1,125 @@
-<style>
-  .legal-dossier-module {
-    width: 100%;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-    font-family: 'Space Grotesk', sans-serif;
-    background: transparent;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Policy | RupamDas.in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Space Grotesk', 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-  /* --- DOSSIER HEADER --- */
-  .legal-header {
-    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
-    padding-bottom: 30px;
-    margin-bottom: 50px;
-  }
+        .legal-dossier-module {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
 
-  .legal-tag {
-    color: #FF2A55;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    display: inline-block;
-  }
+        h1, h2, h3 {
+            color: #58a6ff;
+            margin-top: 0;
+        }
 
-  .legal-title {
-    color: #F1F5F9;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    margin: 0 0 15px 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-  }
+        h1 {
+            font-size: 2rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
 
-  .legal-meta {
-    color: #94A3B8;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 1px;
-    line-height: 1.6;
-  }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #30363d;
+            padding-bottom: 5px;
+        }
 
-  .legal-meta span {
-    color: #00E5FF;
-    font-weight: 600;
-  }
+        h3 {
+            font-size: 1.2rem;
+            color: #c9d1d9;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
 
-  /* --- DOSSIER SECTIONS --- */
-  .legal-section {
-    margin-bottom: 60px;
-    position: relative;
-    padding-left: 30px;
-  }
+        .legal-tag {
+            color: #8b949e;
+            font-family: monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+            letter-spacing: 1px;
+        }
 
-  .legal-section::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    bottom: 0;
-    width: 2px;
-    background: rgba(0, 229, 255, 0.2);
-    transition: all 0.3s ease;
-  }
+        .legal-meta {
+            margin-bottom: 40px;
+            font-family: monospace;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
 
-  .legal-section:hover::before {
-    background: #00E5FF;
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
-  }
+        .legal-meta span {
+            color: #c9d1d9;
+            font-weight: bold;
+        }
 
-  .section-index {
-    color: #00E5FF;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-    display: block;
-  }
+        p, li {
+            font-size: 1rem;
+            color: #8b949e;
+            margin-bottom: 15px;
+        }
 
-  .section-title {
-    color: #F1F5F9;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0 0 20px 0;
-    line-height: 1.3;
-  }
+        strong {
+            color: #c9d1d9;
+        }
 
-  .sub-section-title {
-    color: #F1F5F9;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 25px 0 10px 0;
-    font-family: 'JetBrains Mono', monospace;
-  }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
 
-  .section-text {
-    color: #94A3B8;
-    font-size: 16px;
-    line-height: 1.8;
-    margin: 0 0 15px 0;
-  }
+        li {
+            margin-bottom: 10px;
+        }
 
-  .section-text strong {
-    color: #F1F5F9;
-    font-weight: 600;
-  }
-  
-  .highlight-cyan {
-    color: #00E5FF;
-    font-weight: 600;
-  }
-  
-  .highlight-crimson {
-    color: #FF2A55;
-    font-weight: 600;
-  }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
 
-  /* --- LISTS --- */
-  .section-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
+        a:hover {
+            text-decoration: underline;
+        }
 
-  .section-list li {
-    color: #94A3B8;
-    font-size: 15.5px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    padding-left: 25px;
-    position: relative;
-  }
-
-  .section-list li::before {
-    content: '>';
-    font-family: 'JetBrains Mono', monospace;
-    color: #FF2A55;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-  }
-
-  /* --- CONTACT TERMINAL --- */
-  .legal-contact-box {
-    background: rgba(0, 229, 255, 0.03);
-    border: 1px dashed rgba(0, 229, 255, 0.3);
-    border-radius: 8px;
-    padding: 30px;
-    margin-top: 30px;
-  }
-
-  .legal-contact-box a {
-    color: #00E5FF;
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-  .legal-contact-box a:hover {
-    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
-  }
-
-  /* --- MOBILE TWEAKS --- */
-  @media (max-width: 768px) {
-    .legal-dossier-module {
-      margin: 40px auto;
-    }
-    .legal-section {
-      padding-left: 20px;
-      margin-bottom: 50px;
-    }
-    .legal-title {
-      font-size: 28px;
-    }
-  }
-</style>
+        .legal-contact-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
 
 <div class="legal-dossier-module">
   
   <!-- HEADER -->
   <div class="legal-header">
-    <div class="legal-tag">// COMPREHENSIVE DATA DIRECTIVE</div>
-    <h1 class="legal-title">Privacy Policy & Data Sovereignty</h1>
+    <span class="legal-tag">// COMPREHENSIVE DATA DIRECTIVE</span>
+    <h1>Privacy Policy & Data Sovereignty</h1>
     <div class="legal-meta">
       ENTITY: <span>RUPAMDAS.IN</span><br>
       GOVERNING JURISDICTION: <span>INDIA</span>
@@ -200,28 +128,26 @@
 
   <!-- SECTION 01: Scope -->
   <div class="legal-section">
-    <span class="section-index">01.0</span>
-    <h2 class="section-title">Introduction & Operational Scope</h2>
-    <p class="section-text">This Comprehensive Privacy Policy details the data acquisition, telemetry, storage, routing, and protection mechanisms for <span class="highlight-cyan">rupamdas.in</span> (hereafter referred to as "the Site," "we," "our," or "the Ecosystem"), operated by Rupam Das. This dossier is engineered to comply with global data protection standards and outlines your absolute rights regarding your personal information.</p>
-    <p class="section-text">By interfacing with this digital infrastructure, accessing our computational tools, or submitting inquiries, you acknowledge and consent to the data practices outlined in this operational protocol. If you do not agree with these parameters, you must disconnect from the ecosystem immediately.</p>
+    <h2>01.0 Introduction & Operational Scope</h2>
+    <p>This Comprehensive Privacy Policy details the data acquisition, telemetry, storage, routing, and protection mechanisms for <strong>rupamdas.in</strong> (hereafter referred to as "the Site," "we," "our," or "the Ecosystem"), operated by Rupam Das. This dossier is engineered to comply with global data protection standards and outlines your absolute rights regarding your personal information.</p>
+    <p>By interfacing with this digital infrastructure, accessing our computational tools, or submitting inquiries, you acknowledge and consent to the data practices outlined in this operational protocol. If you do not agree with these parameters, you must disconnect from the ecosystem immediately.</p>
   </div>
 
   <!-- SECTION 02: Data Collection -->
   <div class="legal-section">
-    <span class="section-index">02.0</span>
-    <h2 class="section-title">Data Acquisition Parameters</h2>
-    <p class="section-text">To maintain peak operational efficiency and provide tailored scientific and educational architecture, we collect specific data nodes classified into the following categories:</p>
+    <h2>02.0 Data Acquisition Parameters</h2>
+    <p>To maintain peak operational efficiency and provide tailored scientific and educational architecture, we collect specific data nodes classified into the following categories:</p>
     
-    <h3 class="sub-section-title">02.1 Information Provided Voluntarily (Direct Input)</h3>
-    <ul class="section-list">
+    <h3>02.1 Information Provided Voluntarily (Direct Input)</h3>
+    <ul>
       <li><strong>Identity Markers:</strong> Full name, organizational or academic affiliation, and primary contact email addresses submitted via our <em>Dendrite</em> terminal or contact forms.</li>
       <li><strong>Transactional Nodes (Golgix):</strong> Billing details, shipping coordinates, and order histories generated when utilizing our <em>Golgix</em> e-commerce terminal (WooCommerce architecture). <em>Note: Raw financial credentials (credit card numbers) are securely routed directly to our certified payment gateways; they are never stored on our localized servers.</em></li>
       <li><strong>Communication Logs:</strong> The contents of emails, direct messages, or queries sent to our administrative addresses (e.g., <em>namaste@rupamdas.in</em>).</li>
       <li><strong>Account/Input Variables:</strong> Scientific parameters, file uploads, or code strings voluntarily pasted into our web utilities (e.g., <em>Codon</em>, <em>Biome</em>) for localized processing.</li>
     </ul>
 
-    <h3 class="sub-section-title">02.2 Automated Telemetry (Passive Collection)</h3>
-    <ul class="section-list">
+    <h3>02.2 Automated Telemetry (Passive Collection)</h3>
+    <ul>
       <li><strong>Network Identification:</strong> IP addresses, Internet Service Provider (ISP) details, and referring/exit pages.</li>
       <li><strong>Hardware & Software Specs:</strong> Browser typology, operating system, device models, and screen resolution to optimize the UI rendering matrix.</li>
       <li><strong>Interaction Metrics:</strong> Time-stamps, session durations, click-stream data, and navigational pathways tracked via third-party analytics (e.g., Google Analytics).</li>
@@ -230,10 +156,9 @@
 
   <!-- SECTION 03: Processing Purposes -->
   <div class="legal-section">
-    <span class="section-index">03.0</span>
-    <h2 class="section-title">Modalities of Data Processing</h2>
-    <p class="section-text">We deploy your data exclusively for functional, analytical, and communicative purposes. Your information is synthesized to achieve the following directives:</p>
-    <ul class="section-list">
+    <h2>03.0 Modalities of Data Processing</h2>
+    <p>We deploy your data exclusively for functional, analytical, and communicative purposes. Your information is synthesized to achieve the following directives:</p>
+    <ul>
       <li><strong>System Optimization:</strong> To monitor active user loads, identify broken code sequences (404 Mutations), and improve the structural integrity of the Site.</li>
       <li><strong>Commercial Execution (Golgix):</strong> To process secure transactions, fulfill digital or physical asset deliveries, and generate compliant tax invoicing required by governmental directives.</li>
       <li><strong>Communication Routing:</strong> To respond to academic inquiries, professional collaboration requests, and support tickets efficiently.</li>
@@ -244,30 +169,27 @@
 
   <!-- SECTION 04: Scientific/Biological Clauses -->
   <div class="legal-section">
-    <span class="section-index">04.0</span>
-    <h2 class="section-title">Scientific & Biological Data Integrity</h2>
-    <p class="section-text">Due to the intersection of this platform with the domains of Microbiology, scientific research, and educational architecture, users may occasionally transmit biological variables or research datasets. <span class="highlight-crimson">Any sensitive, academic, or research data submitted to this domain is treated with absolute confidentiality.</span></p>
-    <p class="section-text">We explicitly state that this platform does not conduct medical diagnostics, nor do we provide certified clinical advice. All processed variables and outputs from our computational modules are for academic, theoretical, and research purposes only.</p>
+    <h2>04.0 Scientific & Biological Data Integrity</h2>
+    <p>Due to the intersection of this platform with the domains of Microbiology, scientific research, and educational architecture, users may occasionally transmit biological variables or research datasets. <strong>Any sensitive, academic, or research data submitted to this domain is treated with absolute confidentiality.</strong></p>
+    <p>We explicitly state that this platform does not conduct medical diagnostics, nor do we provide certified clinical advice. All processed variables and outputs from our computational modules are for academic, theoretical, and research purposes only.</p>
   </div>
 
   <!-- SECTION 05: Telemetry & Cookies -->
   <div class="legal-section">
-    <span class="section-index">05.0</span>
-    <h2 class="section-title">Tracking Infrastructure (Cookies)</h2>
-    <p class="section-text">The Site utilizes digital tracking mechanisms (Cookies and Web Beacons) to optimize the user interface. These include:</p>
-    <ul class="section-list">
+    <h2>05.0 Tracking Infrastructure (Cookies)</h2>
+    <p>The Site utilizes digital tracking mechanisms (Cookies and Web Beacons) to optimize the user interface. These include:</p>
+    <ul>
       <li><strong>Essential Cookies:</strong> Required for fundamental site operations, such as security gateways, shopping cart retention within the Golgix module, and load balancing.</li>
       <li><strong>Analytical Cookies:</strong> Deployed by Google Analytics and similar frameworks to trace visitor flow, compile statistical reports, and measure algorithmic performance.</li>
     </ul>
-    <p class="section-text">You retain the sovereignty to disable or block non-essential cookies via your browser configurations. However, modifying these parameters may degrade certain functional aspects of our web utilities.</p>
+    <p>You retain the sovereignty to disable or block non-essential cookies via your browser configurations. However, modifying these parameters may degrade certain functional aspects of our web utilities.</p>
   </div>
 
   <!-- SECTION 06: Third-Party Routing -->
   <div class="legal-section">
-    <span class="section-index">06.0</span>
-    <h2 class="section-title">Data Routing & External Disclosures</h2>
-    <p class="section-text"><strong>We do not sell, rent, trade, or weaponize your personal data.</strong> Your information is never transferred to unauthorized external entities for marketing purposes. However, to sustain this ecosystem, data is securely routed through vetted third-party infrastructure:</p>
-    <ul class="section-list">
+    <h2>06.0 Data Routing & External Disclosures</h2>
+    <p><strong>We do not sell, rent, trade, or weaponize your personal data.</strong> Your information is never transferred to unauthorized external entities for marketing purposes. However, to sustain this ecosystem, data is securely routed through vetted third-party infrastructure:</p>
+    <ul>
       <li><strong>Financial Routing (Payment Gateways):</strong> Transactional data is securely transmitted to certified financial processors (e.g., Zoho Payments) to execute authorized cryptographic handshakes for your purchases.</li>
       <li><strong>Service Providers:</strong> Cloud hosting protocols (e.g., Cloudflare, MilesWeb), email dispatchers (e.g., Zoho Mail), and analytics engines processing data strictly on our behalf.</li>
       <li><strong>Legal Mandates:</strong> We reserve the right to disclose telemetry or communication logs if explicitly required by law enforcement, subpoena, or to defend our intellectual property and infrastructural security.</li>
@@ -277,10 +199,9 @@
 
   <!-- SECTION 07: Data Retention -->
   <div class="legal-section">
-    <span class="section-index">07.0</span>
-    <h2 class="section-title">Data Retention & Storage Protocols</h2>
-    <p class="section-text">Data is retained only as long as biologically or operationally necessary to fulfill the purposes outlined in this dossier, or as required by statutory legal mandates.</p>
-    <ul class="section-list">
+    <h2>07.0 Data Retention & Storage Protocols</h2>
+    <p>Data is retained only as long as biologically or operationally necessary to fulfill the purposes outlined in this dossier, or as required by statutory legal mandates.</p>
+    <ul>
       <li><strong>Transactional Data:</strong> E-commerce records processed via the Golgix module are retained as required by Indian taxation and corporate accounting laws (typically 7-8 years).</li>
       <li><strong>Telemetry Data:</strong> Automatically purged or fully anonymized after a standard operational cycle (typically 14 to 26 months).</li>
       <li><strong>Communication Logs:</strong> Maintained securely in our <em>Nucleus</em> archives for ongoing professional or academic reference until deletion is requested.</li>
@@ -289,25 +210,22 @@
 
   <!-- SECTION 08: Minor Access -->
   <div class="legal-section">
-    <span class="section-index">08.0</span>
-    <h2 class="section-title">Protection of Minors (COPPA Protocol)</h2>
-    <p class="section-text">This platform hosts scientific and educational content accessible to the global public, including students under the age of 18. While our content is universally safe, we do not knowingly solicit, target, or collect personally identifiable data or process commercial transactions from minors.</p>
-    <p class="section-text">If a minor intends to submit personal data via our communication portals or the Golgix store, it is legally assumed that explicit guardian consent has been acquired. If we discover unauthorized data originating from a minor without such consent, it will be immediately purged from our servers.</p>
+    <h2>08.0 Protection of Minors (COPPA Protocol)</h2>
+    <p>This platform hosts scientific and educational content accessible to the global public, including students under the age of 18. While our content is universally safe, we do not knowingly solicit, target, or collect personally identifiable data or process commercial transactions from minors.</p>
+    <p>If a minor intends to submit personal data via our communication portals or the Golgix store, it is legally assumed that explicit guardian consent has been acquired. If we discover unauthorized data originating from a minor without such consent, it will be immediately purged from our servers.</p>
   </div>
 
   <!-- SECTION 09: Security -->
   <div class="legal-section">
-    <span class="section-index">09.0</span>
-    <h2 class="section-title">Infrastructural Security Measures</h2>
-    <p class="section-text">We deploy enterprise-grade security architecture to protect your data from unauthorized extraction, alteration, or destruction. This includes SSL/TLS encryption for all data in transit, strict access control lists (ACLs) for backend databases, and DNS-level firewall protections. However, no digital transmission matrix is 100% impenetrable; therefore, you transmit data at your own calculated risk.</p>
+    <h2>09.0 Infrastructural Security Measures</h2>
+    <p>We deploy enterprise-grade security architecture to protect your data from unauthorized extraction, alteration, or destruction. This includes SSL/TLS encryption for all data in transit, strict access control lists (ACLs) for backend databases, and DNS-level firewall protections. However, no digital transmission matrix is 100% impenetrable; therefore, you transmit data at your own calculated risk.</p>
   </div>
 
   <!-- SECTION 10: User Rights -->
   <div class="legal-section">
-    <span class="section-index">10.0</span>
-    <h2 class="section-title">User Rights & Data Sovereignty</h2>
-    <p class="section-text">Depending on your geographic jurisdiction, you possess absolute sovereignty over your digital footprint. You have the right to:</p>
-    <ul class="section-list">
+    <h2>10.0 User Rights & Data Sovereignty</h2>
+    <p>Depending on your geographic jurisdiction, you possess absolute sovereignty over your digital footprint. You have the right to:</p>
+    <ul>
       <li><strong>Access:</strong> Request a complete export of the personal data we hold about you.</li>
       <li><strong>Rectification:</strong> Request the correction of any inaccurate or corrupted data nodes (including billing profiles in the Golgix system).</li>
       <li><strong>Erasure (Right to be Forgotten):</strong> Demand the total deletion of your data from our active servers.</li>
@@ -316,15 +234,17 @@
   </div>
 
   <!-- SECTION 11: Contact -->
-  <div class="legal-section" style="margin-bottom: 0;">
-    <span class="section-index">11.0</span>
-    <h2 class="section-title">Policy Modifications & Contact Directives</h2>
-    <p class="section-text">We reserve the right to mutate or update this Privacy Policy at any time to reflect infrastructural upgrades or legal shifts. Modifications take effect immediately upon deployment to this URL. Continued interaction with the Site signifies your acceptance of the updated parameters.</p>
+  <div class="legal-section">
+    <h2>11.0 Policy Modifications & Contact Directives</h2>
+    <p>We reserve the right to mutate or update this Privacy Policy at any time to reflect infrastructural upgrades or legal shifts. Modifications take effect immediately upon deployment to this URL. Continued interaction with the Site signifies your acceptance of the updated parameters.</p>
     
     <div class="legal-contact-box">
-      <p class="section-text" style="margin-bottom: 5px;">To execute a data deletion directive, raise a privacy inquiry, or contact the Chief Architect, initiate a transmission via the primary Dendrite terminal:</p>
+      <p style="margin-top: 0;">To execute a data deletion directive, raise a privacy inquiry, or contact the Chief Architect, initiate a transmission via the primary Dendrite terminal:</p>
       <a href="mailto:namaste@rupamdas.in">namaste@rupamdas.in</a>
     </div>
   </div>
 
 </div>
+
+</body>
+</html>
