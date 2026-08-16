@@ -1,0 +1,300 @@
+<style>
+  .legal-dossier-module {
+    width: 100%;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    background: transparent;
+  }
+
+  /* --- DOSSIER HEADER --- */
+  .legal-header {
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+  }
+
+  .legal-tag {
+    color: #FF2A55;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  .legal-title {
+    color: #F1F5F9;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .legal-meta {
+    color: #94A3B8;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+  }
+
+  .legal-meta span {
+    color: #00E5FF;
+    font-weight: 600;
+  }
+
+  /* --- DOSSIER SECTIONS --- */
+  .legal-section {
+    margin-bottom: 60px;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .legal-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 229, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .legal-section:hover::before {
+    background: #00E5FF;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+  }
+
+  .section-index {
+    color: #00E5FF;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    color: #F1F5F9;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+  }
+
+  .sub-section-title {
+    color: #F1F5F9;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px 0 10px 0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .section-text {
+    color: #94A3B8;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 15px 0;
+  }
+
+  .section-text strong {
+    color: #F1F5F9;
+    font-weight: 600;
+  }
+  
+  .highlight-cyan {
+    color: #00E5FF;
+    font-weight: 600;
+  }
+  
+  .highlight-crimson {
+    color: #FF2A55;
+    font-weight: 600;
+  }
+
+  /* --- LISTS --- */
+  .section-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .section-list li {
+    color: #94A3B8;
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .section-list li::before {
+    content: '>';
+    font-family: 'JetBrains Mono', monospace;
+    color: #FF2A55;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
+
+  /* --- CONTACT TERMINAL --- */
+  .legal-contact-box {
+    background: rgba(0, 229, 255, 0.03);
+    border: 1px dashed rgba(0, 229, 255, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+  }
+
+  .legal-contact-box a {
+    color: #00E5FF;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .legal-contact-box a:hover {
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+  }
+
+  /* --- MOBILE TWEAKS --- */
+  @media (max-width: 768px) {
+    .legal-dossier-module {
+      margin: 40px auto;
+    }
+    .legal-section {
+      padding-left: 20px;
+      margin-bottom: 50px;
+    }
+    .legal-title {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<div class="legal-dossier-module">
+  
+  <!-- HEADER -->
+  <div class="legal-header">
+    <div class="legal-tag">// OPERATIONAL FRAMEWORK</div>
+    <h1 class="legal-title">Terms & Conditions</h1>
+    <div class="legal-meta">
+      ENTITY: <span>RUPAMDAS.IN</span><br>
+      GOVERNING JURISDICTION: <span>INDIA (IT ACT, 2000)</span>
+    </div>
+  </div>
+
+  <!-- SECTION 01: Agreement to Terms -->
+  <div class="legal-section">
+    <span class="section-index">01.0</span>
+    <h2 class="section-title">Acceptance of Protocol</h2>
+    <p class="section-text">These Terms and Conditions constitute a legally binding contract established between you (the "User") and <span class="highlight-cyan">rupamdas.in</span> (the "Ecosystem", "we", "us"), operated by Rupam Das. This agreement governs your access to and interaction with our digital architecture, including all sub-domains, web utilities (Biome, Catalyst, Codon), educational repositories (Plasmid, In Vitro), and commercial execution nodes (Golgix).</p>
+    <p class="section-text">By interfacing with this infrastructure, engaging in financial transactions, or utilizing our services, you explicitly acknowledge that you have read, comprehended, and agreed to be bound by all structural parameters outlined herein. <span class="highlight-crimson">If you do not agree with these Terms, you are expressly prohibited from utilizing this Site and must disconnect immediately.</span></p>
+  </div>
+
+  <!-- SECTION 02: Intellectual Property Sovereignty -->
+  <div class="legal-section">
+    <span class="section-index">02.0</span>
+    <h2 class="section-title">Intellectual Property & Asset Sovereignty</h2>
+    <p class="section-text">All structural, biological, and computational assets hosted within this ecosystem are the exclusive intellectual property of Rupam Das, protected under Indian Copyright and applicable international intellectual property laws. This includes, but is not limited to:</p>
+    <ul class="section-list">
+      <li><strong>Code & Algorithms:</strong> All scripts, sequence parsers, and scientific calculators hosted in <em>Biome</em> and <em>Catalyst</em>.</li>
+      <li><strong>Academic Repositories:</strong> All original study materials, notes, and PDFs distributed via the <em>Plasmid</em> library.</li>
+      <li><strong>Visual Data:</strong> Wet-lab video documentation (<em>In Vitro</em>), simulation graphics, design matrices, and site architecture.</li>
+    </ul>
+    <p class="section-text">You are granted a limited, non-exclusive, revocable license to access these materials strictly for personal, academic, and non-commercial research. You may not reverse-engineer, scrape, copy, reproduce, or commercially distribute any structural asset from this domain without explicit, written cryptographic authorization from the Architect.</p>
+  </div>
+
+  <!-- SECTION 03: Prohibited Actions -->
+  <div class="legal-section">
+    <span class="section-index">03.0</span>
+    <h2 class="section-title">Prohibited Network Behaviors</h2>
+    <p class="section-text">To maintain the integrity and security of the ecosystem, users are strictly prohibited from executing the following directives:</p>
+    <ul class="section-list">
+      <li>Deploying automated extraction tools (scrapers, bots, spiders, or data mining software) to harvest data from our servers.</li>
+      <li>Attempting to bypass, disable, or interface maliciously with security-related features, firewalls, or load balancers.</li>
+      <li>Weaponizing our web utilities (e.g., executing brute-force inputs into <em>Codon</em> or <em>Catalyst</em> to overload server memory).</li>
+      <li>Uploading or transmitting malware, trojans, or corrupted biological/computational files through our <em>Receptor</em> forms or <em>Dendrite</em> terminal.</li>
+      <li>Engaging in fraudulent financial transactions or exploiting the <em>Golgix</em> e-commerce node via spoofed coordinates or stolen payment parameters.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 04: Scientific & Clinical Disclaimer -->
+  <div class="legal-section">
+    <span class="section-index">04.0</span>
+    <h2 class="section-title">Scientific & Clinical Liability Disclaimer</h2>
+    <p class="section-text">This platform operates at the intersection of Microbiology, software engineering, and scientific research. <span class="highlight-crimson">However, none of the data, algorithms, or visual media provided herein constitutes certified medical, diagnostic, or professional laboratory advice.</span></p>
+    <ul class="section-list">
+      <li><strong>Web Utilities:</strong> Calculators and scripts (e.g., Agar dilution algorithms) are provided "AS IS" for academic and theoretical simulation. We assume no liability for real-world laboratory failures or academic discrepancies resulting from their use.</li>
+      <li><strong>Wet Labs (In Vitro):</strong> Video logs and physical bench-work documentation are for educational exhibition only. Users attempting to replicate these protocols in external environments do so entirely at their own risk. We hold zero liability for biological contamination, physical injury, or chemical hazards resulting from unverified replication.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 05: Commercial & Financial Protocols -->
+  <div class="legal-section">
+    <span class="section-index">05.0</span>
+    <h2 class="section-title">Commercial Execution (Golgix) & Financial Protocols</h2>
+    <p class="section-text">The ecosystem integrates a commercial distribution node (<em>Golgix</em>) for the procurement of digital assets, physical utilities, or API access. Engaging with this node binds you to the following commercial directives:</p>
+    <ul class="section-list">
+      <li><strong>Financial Gateways:</strong> All transactions are processed through certified third-party cryptographic payment gateways (e.g., Zoho Payments). You agree to abide by the processing terms of these external entities during checkout.</li>
+      <li><strong>Pricing & Sovereignty:</strong> We reserve the absolute right to mutate pricing variables, discontinue assets, or cancel/refund orders flagged by our security matrix without prior notice.</li>
+      <li><strong>Transactional Finality:</strong> All commercial interactions, including digital asset deliveries and financial dispute resolutions, are governed explicitly by our dedicated <a href="/refund.html" style="color: #00E5FF; text-decoration: none;">Refund Protocol</a> and <a href="/shipping.html" style="color: #00E5FF; text-decoration: none;">Shipping Policy</a>.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 06: External Symbiosis -->
+  <div class="legal-section">
+    <span class="section-index">06.0</span>
+    <h2 class="section-title">External Symbiosis (Third-Party Links & Affiliates)</h2>
+    <p class="section-text">The ecosystem contains routing nodes (hyperlinks) leading to external domains (e.g., our <em>Substrate</em> infrastructure partners, GitHub repositories, or external research papers). These nodes are provided for operational synergy. We do not exercise administrative control over third-party domains and assume no responsibility for their content, privacy protocols, or security matrix.</p>
+    <p class="section-text">Certain structural links may be engineered as <em>Mutualistic Affiliate Nodes</em>. Engaging with these specific nodes may generate fractional financial compensation for this ecosystem at no additional metabolic cost to the user.</p>
+  </div>
+
+  <!-- SECTION 07: Limitation of Liability -->
+  <div class="legal-section">
+    <span class="section-index">07.0</span>
+    <h2 class="section-title">Absolute Limitation of Liability</h2>
+    <p class="section-text">Under no circumstances—including but not limited to negligence—shall Rupam Das, or any affiliated operational entities, be held legally or financially liable for any direct, indirect, incidental, special, or consequential damages. This includes loss of data, loss of revenue, academic penalization, laboratory hardware damage, or financial gateway anomalies arising from the inability to access the site, errors in our code variables, or reliance on any information hosted within this ecosystem.</p>
+  </div>
+
+  <!-- SECTION 08: Modifications -->
+  <div class="legal-section">
+    <span class="section-index">08.0</span>
+    <h2 class="section-title">Ecosystem Modifications</h2>
+    <p class="section-text">We retain the unilateral right to modify, upgrade, or temporarily suspend any module of this digital infrastructure (including algorithms, web utilities, commercial nodes, and these Terms) at our sole discretion, without prior transmission of notice. It is your responsibility to review this operational framework periodically for structural updates.</p>
+  </div>
+
+  <!-- SECTION 09: Governing Law -->
+  <div class="legal-section">
+    <span class="section-index">09.0</span>
+    <h2 class="section-title">Jurisdiction & Governing Law</h2>
+    <p class="section-text">This agreement, and any commercial or structural disputes arising from your interfacing with this ecosystem, shall be governed strictly by the laws of India, specifically operating under the parameters of the <strong>Information Technology Act, 2000</strong> and subsequent amendments. Any legal proceedings shall be subject to the exclusive jurisdiction of the competent courts located in West Bengal, India.</p>
+  </div>
+
+  <!-- SECTION 10: Contact -->
+  <div class="legal-section" style="margin-bottom: 0;">
+    <span class="section-index">10.0</span>
+    <h2 class="section-title">Legal Transmissions</h2>
+    <p class="section-text">For inquiries regarding intellectual property licensing, commercial transaction disputes, reporting of network abuse, or clarification of these operational terms, initiate a transmission to the Chief Architect via the primary terminal:</p>
+    
+    <div class="legal-contact-box">
+      <p class="section-text" style="margin-bottom: 5px;">Initiate Transmission:</p>
+      <a href="mailto:namaste@rupamdas.in">namaste@rupamdas.in</a>
+    </div>
+  </div>
+
+</div>
